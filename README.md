@@ -1,2 +1,2 @@
 # MamaAI-
-One AI assistant for every Mumzworld mom — shopping, health, reviews, returns. Bilingual EN + AR.
+One AI assistant for every Mumzworld mom — shopping, health, reviews, returns. Bilingual EN + AR(MamaAI — يا مام)
