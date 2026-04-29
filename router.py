@@ -16,15 +16,18 @@ If you cannot classify clearly, respond with: unknown
 
 
 def route_intent(user_message: str) -> str:
-    """
-    Detect intent from user message.
-    Returns one of: shopping | health | verdict | returns | unknown
-    """
+    msg = user_message.lower()
+
+    # ✅ FIX: verdict override (ADD THIS BLOCK)
+    if "review" in msg or "reviews" in msg or "rating" in msg or "what do moms say" in msg:
+        return "verdict"
+
     result = call_llm(
         system_prompt=ROUTER_SYSTEM_PROMPT,
         user_message=user_message,
         temperature=0.0,
     )
+    
     intent = result.strip().lower()
     valid = {"shopping", "health", "verdict", "returns"}
     if intent not in valid:

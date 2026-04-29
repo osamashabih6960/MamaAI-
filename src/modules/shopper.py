@@ -48,7 +48,7 @@ def run_shopper(user_message: str, lang: str) -> dict:
             "success": False,
             "confidence": 0.0,
             "null_reason": "Could not generate a shopping list. Please try rephrasing.",
-            "module": "shopper",
+            "module": "shopping",
         }
 
-    return {**result.model_dump(), "module": "shopper"}
+    return {**result.model_dump(), "module": "shopping"}

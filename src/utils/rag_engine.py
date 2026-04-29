@@ -9,7 +9,7 @@ def load_reviews(filepath: str = "data/sample_reviews.json") -> list[dict]:
     path = Path(filepath)
     if not path.exists():
         return []
-    with open(path,"r",encoding="urf-8") as f:
+    with open(path,"r",encoding="utf-8") as f:
         return json.load(f)
     
     

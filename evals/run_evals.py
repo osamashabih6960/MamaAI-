@@ -57,7 +57,7 @@ def run_single(case: dict) -> dict:
 
 def write_failures_md(results: list[dict]):
     failures = [r for r in results if not r["passed"]]
-    with open(FAILURES_PATH, "w") as f:
+    with open(FAILURES_PATH, "w", encoding="utf-8") as f:
         f.write("# MamaAI Eval Failures\n\n")
         f.write(f"Total failures: {len(failures)} / {len(results)}\n\n")
         if not failures:
@@ -75,7 +75,7 @@ def write_failures_md(results: list[dict]):
 
 
 def main():
-    with open(TEST_CASES_PATH) as f:
+    with open(TEST_CASES_PATH,"r", encoding="utf-8") as f:
         cases = json.load(f)
 
     results = []
@@ -92,7 +92,7 @@ def main():
 
     print(f"\nResult: {passed}/{len(cases)} passed")
 
-    with open(RESULTS_PATH, "w") as f:
+    with open(RESULTS_PATH, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"Results saved to {RESULTS_PATH}")
 
