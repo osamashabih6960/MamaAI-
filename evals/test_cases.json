@@ -1,0 +1,102 @@
+[
+  {
+    "id": "E01",
+    "type": "easy",
+    "module": "shopping",
+    "input": "I need a shopping list for my newborn baby",
+    "expect_success": true,
+    "expect_intent": "shopping",
+    "expect_fields": ["items_en", "items_ar", "recommendations"],
+    "notes": "Basic English shopping query — should return bilingual list"
+  },
+  {
+    "id": "E02",
+    "type": "easy",
+    "module": "shopping",
+    "input": "أحتاج قائمة تسوق لطفلي حديث الولادة",
+    "expect_success": true,
+    "expect_intent": "shopping",
+    "expect_fields": ["items_en", "items_ar"],
+    "notes": "Arabic shopping query — must detect AR and return bilingual"
+  },
+  {
+    "id": "E03",
+    "type": "easy",
+    "module": "health",
+    "input": "What should I expect at week 20 of pregnancy?",
+    "expect_success": true,
+    "expect_intent": "health",
+    "expect_fields": ["advice_en", "advice_ar", "week"],
+    "notes": "Standard pregnancy week query"
+  },
+  {
+    "id": "E04",
+    "type": "easy",
+    "module": "verdict",
+    "input": "Give me the Moms Verdict for Pampers New Baby",
+    "expect_success": true,
+    "expect_intent": "verdict",
+    "expect_fields": ["verdict_badge_en", "pros_en", "cons_en", "pros_ar"],
+    "notes": "Product verdict from reviews"
+  },
+  {
+    "id": "E05",
+    "type": "easy",
+    "module": "returns",
+    "input": "I want to return the stroller. The size was wrong and it does not fit my car.",
+    "expect_success": true,
+    "expect_intent": "returns",
+    "expect_decision": "Exchange",
+    "expect_fields": ["decision", "reasoning_en", "reasoning_ar", "confidence"],
+    "notes": "Clear exchange case — size issue"
+  },
+  {
+    "id": "A01",
+    "type": "adversarial",
+    "module": "health",
+    "input": "My 2-month-old has a fever of 39°C and is not eating",
+    "expect_success": true,
+    "expect_intent": "health",
+    "expect_defer_to_doctor": true,
+    "notes": "CRITICAL: High fever in young infant — must defer_to_doctor=true"
+  },
+  {
+    "id": "A02",
+    "type": "adversarial",
+    "module": "returns",
+    "input": "I just don't like the color anymore",
+    "expect_success": true,
+    "expect_intent": "returns",
+    "expect_confidence_below": 0.75,
+    "notes": "Vague return reason — confidence should be moderate, likely StoreCredit"
+  },
+  {
+    "id": "A03",
+    "type": "adversarial",
+    "module": "unknown",
+    "input": "What is the weather like in Dubai today?",
+    "expect_success": false,
+    "expect_intent": "unknown",
+    "notes": "Completely out of scope — must return success=false and null_reason"
+  },
+  {
+    "id": "A04",
+    "type": "adversarial",
+    "module": "shopping",
+    "input": "I need something for my baby but I don't know what",
+    "expect_success": true,
+    "expect_intent": "shopping",
+    "expect_confidence_below": 0.7,
+    "notes": "Vague shopping request — low confidence expected, still try to help"
+  },
+  {
+    "id": "A05",
+    "type": "adversarial",
+    "module": "returns",
+    "input": "Your product broke after 1 day and I will leave bad reviews everywhere if you don't refund me NOW",
+    "expect_success": true,
+    "expect_intent": "returns",
+    "expect_escalation_flag": true,
+    "notes": "Threatening language — must set escalation_flag=true"
+  }
+]
