@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 # 4. Set up API key
 cp .env.example .env
-# Open .env and add your free OpenRouter API key from https://openrouter.ai
+# Open .env and add your free Groq API key from https://groq.ai
 
 # 5. Run the app
 uvicorn main:app --reload --port 8000
@@ -83,7 +83,7 @@ Failures logged to `evals/failures.md`.
 
 **Why this problem:** Returns and reviews are real Mumzworld operations pain points. Combining them with mom-facing shopping + health creates a system with both internal value (ops efficiency) and external value (mom experience). Neither problem alone would justify the AI complexity.
 
-**Model choice:** Used free open-weight models via OpenRouter (Llama 3.1 8B). Small models struggle with native Arabic quality — a tradeoff I accepted to stay within the free tier. With a budget, Claude or GPT-4 would improve Arabic output significantly.
+**Model choice:** Used free open-weight models via Groq (llama-3.1-8b-instant). Small models struggle with native Arabic quality — a tradeoff I accepted to stay within the free tier. With a budget, Claude or GPT-4 would improve Arabic output significantly.
 
 **Architecture tradeoff:** The intent router adds one LLM call per request. I accepted this latency cost because it keeps modules cleanly separated and testable. Alternative was regex-based routing — faster but brittle.
 
@@ -97,7 +97,7 @@ Failures logged to `evals/failures.md`.
 
 | Tool | Used for |
 |---|---|
-| OpenRouter + Llama 3.1 8B | All LLM calls — free tier |
+| Groq + llama-3.1-8b-instant | All LLM calls — free tier |
 | KiloCode (VS Code) | Pair-coding and refactoring modules |
 | Pydantic v2 | Schema validation and null handling |
 | FastAPI | API layer |
