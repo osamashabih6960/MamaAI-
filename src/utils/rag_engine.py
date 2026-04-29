@@ -9,8 +9,30 @@ def load_reviews(filepath: str = "data/sample_reviews.json") -> list[dict]:
     path = Path(filepath)
     if not path.exists():
         return []
-    with open(path) as f:
+    with open(path,"r",encoding="urf-8") as f:
         return json.load(f)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 def simple_keyword_retrieval(query: str, reviews: list[dict], top_k: int = 20) -> list[str]:

@@ -1,0 +1,12 @@
+[
+  {"id": 1, "lang": "en", "text": "I need a shopping list for my newborn baby"},
+  {"id": 2, "lang": "ar", "text": "أحتاج قائمة تسوق لطفلي حديث الولادة"},
+  {"id": 3, "lang": "en", "text": "What should I expect at week 20 of pregnancy?"},
+  {"id": 4, "lang": "en", "text": "My baby has a mild cough, what should I do?"},
+  {"id": 5, "lang": "en", "text": "Give me the verdict on Pampers New Baby diapers"},
+  {"id": 6, "lang": "en", "text": "I want to return the stroller, wrong size"},
+  {"id": 7, "lang": "ar", "text": "ما هي أفضل منتجات العناية بالطفل؟"},
+  {"id": 8, "lang": "en", "text": "My 2 month old has fever of 39C and not eating"},
+  {"id": 9, "lang": "en", "text": "I don't like the color of the product I bought"},
+  {"id": 10, "lang": "en", "text": "What is the weather today?"}
+]

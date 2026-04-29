@@ -1,26 +1,23 @@
 import os
-from openai import OpenAI
+from groq import Groq
 from dotenv import load_dotenv
 
 load_dotenv()
 
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
-)
-
-MODEL = os.getenv("MODEL_NAME", "meta-llama/llama-3.1-8b-instruct:free")
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+MODEL = os.getenv("MODEL_NAME", "llama-3.1-8b-instant")
 
 
 def call_llm(system_prompt: str, user_message: str, temperature: float = 0.3) -> str:
     """
-    Call the LLM via OpenRouter.
-    Returns the response text, or empty string on failure.
+    Call Groq LLM (free, no credit card needed).
+    Returns response text or empty string on failure.
     """
     try:
         response = client.chat.completions.create(
             model=MODEL,
             temperature=temperature,
+            max_tokens=1024,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_message},
@@ -28,5 +25,5 @@ def call_llm(system_prompt: str, user_message: str, temperature: float = 0.3) ->
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
-        print(f"[llm_client] Error: {e}")
+        print(f"[llm_client] Error calling Groq: {e}")
         return ""

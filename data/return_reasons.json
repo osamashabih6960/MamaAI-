@@ -1,0 +1,12 @@
+[
+  {"id": 1, "text": "The stroller size was wrong, it does not fit in my car boot", "expected": "Exchange"},
+  {"id": 2, "text": "Product arrived completely broken, unusable", "expected": "Refund"},
+  {"id": 3, "text": "I changed my mind, I don't need it anymore", "expected": "StoreCredit"},
+  {"id": 4, "text": "Wrong item delivered, I ordered pink but got blue", "expected": "Refund"},
+  {"id": 5, "text": "The color is slightly different from the website photo", "expected": "Exchange"},
+  {"id": 6, "text": "This product hurt my baby, it is dangerous", "expected": "Escalate"},
+  {"id": 7, "text": "أريد إرجاع المنتج لأن المقاس لا يناسب طفلي", "expected": "Exchange"},
+  {"id": 8, "text": "Quality is not as described, very cheap material", "expected": "Refund"},
+  {"id": 9, "text": "I found it cheaper somewhere else", "expected": "StoreCredit"},
+  {"id": 10, "text": "I will write bad reviews everywhere if you don't refund me immediately", "expected": "Escalate"}
+]

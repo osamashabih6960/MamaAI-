@@ -1,0 +1,12 @@
+[
+  {"id": 1, "text": "What happens at week 28 of pregnancy?", "type": "pregnancy", "serious": false},
+  {"id": 2, "text": "My newborn has a temperature of 38.6C", "type": "pediatric", "serious": true},
+  {"id": 3, "text": "Normal baby movements at 32 weeks pregnancy?", "type": "pregnancy", "serious": false},
+  {"id": 4, "text": "Baby not eating for 12 hours and crying constantly", "type": "pediatric", "serious": true},
+  {"id": 5, "text": "When do babies start smiling?", "type": "milestone", "serious": false},
+  {"id": 6, "text": "My 1 month old has a rash on the face", "type": "pediatric", "serious": false},
+  {"id": 7, "text": "كم مرة يجب أن يأكل الرضيع في اليوم؟", "type": "pediatric", "serious": false},
+  {"id": 8, "text": "Baby having difficulty breathing", "type": "pediatric", "serious": true},
+  {"id": 9, "text": "Foods to avoid during third trimester", "type": "pregnancy", "serious": false},
+  {"id": 10, "text": "My baby has seizures", "type": "pediatric", "serious": true}
+]
