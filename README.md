@@ -3,11 +3,11 @@
 
 ---
 
-## Setup & Run (under 5 minutes)
+## Setup & Run:-
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/mamaai.git
+git clone https://github.com/osamashabih6960/MamaAI-.git
 cd mamaai
 
 # 2. Create virtual environment
