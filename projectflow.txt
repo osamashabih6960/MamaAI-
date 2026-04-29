@@ -1,0 +1,29 @@
+-------------------------Setting up project structure---------------------------
+
+1. Create repo, clone it in local
+2. Create a virtual environment named 'atlas' - conda create -n atlas python=3.10
+3. Activate the virtual environment - conda activate atlas
+
+--> Step 1 — Setup (3 files)
+    1.requirements.txt
+    2..env
+    3 .gitignore 
+
+    -> pip install -r requirements.txt
+    -> python.exe -m pip install --upgrade pip
+
+
+--> Create a Step:2 Architecure files inside src folder
+     1.modules
+     2.prompts
+     3.schemas:-
+            ->i:- base_schema.py
+            ->ii:- shopper_schema.py
+            ->iii:- health_schema.py
+            ->iv:- verdict_schema.py 
+            ->v:- returns_schema.py
+     4.utils:-
+            ->i:-llm_client.py
+            ->ii:-language_detect.py
+            ->iii:-validator.py
+            ->iv:-rag_engine.py
