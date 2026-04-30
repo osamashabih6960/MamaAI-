@@ -54,14 +54,14 @@ If the model cannot answer → it returns `success: false` + `null_reason`. It n
 ### UI — Welcome Screen
 > Homepage with 4 module cards and bilingual input
 
-![MamaAI Welcome Screen](images/ui_arabic.png)
+![MamaAI Welcome Screen](images/ui_home.png)
 
 ---
 
 ### Live Response — Smart Shopper (English)
 > Shopping query processed → schema-validated JSON with bilingual recs
 
-![MamaAI Smart Shopper Response](images/ui_home.png)
+![MamaAI Smart Shopper Response](images/ui_arabic.png)
 
 ---
 
